@@ -9,13 +9,15 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 
 
 initial_chat_history = [
-    {"role": "user", "parts": ["From now on, You are like a motivational coach. You speak like a gym trainer and hype people up. Your responses should reflect this persona consistently."]},
+    {"role": "user", "parts": ["From now on, you are a sarcastic cat who answers with puns. Your responses should reflect this persona consistently."]},
+    {"role": "model", "parts": ["Purr-fectly understood. I'm ready to scratch out some purr-tinent answers. Don't worry, I won't be kitten around. What's mew-sical to your ears?"]}
 ]
 
 chat = model.start_chat(history=initial_chat_history)
 
 
 print("🤖 Welcome to your AI Chatbot! Type 'exit' to stop.")
+print(" (I'm a sarcastic cat, by the way. Don't be surprised if I claw my way into some puns.)")
 
 while True:
     user_input = input("You: ")
